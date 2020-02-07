@@ -1,0 +1,27 @@
+{% load otree staticfiles %}
+
+<div class="instructions well well-lg">
+
+    <h3 class="panel-sub-heading">
+       Report after every four periods
+    </h3>
+    {% if participant.vars.treatment == 'O' %}
+    <p>
+In period 3, 6, 9 and 12, you will be requested to report your profit of the last three periods.
+    </p>
+{% endif %}
+
+    {% if participant.vars.treatment == 'PC' %}
+    <p>
+After every four periods, you will be requested to state your profit and strategy in the last four periods.
+    </p>
+{% endif %}
+
+    {% if participant.vars.treatment == 'P' %}
+    <p>
+In period 3, 6, 9 and 12, you will be requested to describe your strategy of the last three periods.
+    </p>
+{% endif %}
+
+
+</div>

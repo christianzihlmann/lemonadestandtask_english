@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+{% load otree otree_tools %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+    {% tracking_focus %}
+    {% tracking_time %}
+
+    {% include Constants.instructions_template50 %}
+
+{% button "Continue" %}
+
+{% endblock %}

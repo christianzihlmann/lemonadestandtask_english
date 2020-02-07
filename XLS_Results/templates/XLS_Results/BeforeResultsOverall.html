@@ -1,0 +1,19 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% load otree_tools %}
+
+{% block title %}
+    Period 20 / 20
+{% endblock %}
+
+{% block content %}
+        {% tracking_focus %}
+    {% tracking_time %}
+
+    <p>  You finished 20 rounds of running the lemonade stand. Click 'Continue' to learn your overall results. </p>
+
+
+{% button "Continue" %}
+{% endblock %}
+
+

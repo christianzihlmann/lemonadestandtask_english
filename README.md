@@ -1,0 +1,1 @@
+This repository contains OS code that implements the Lemonade Stand Task, developed by Ederer and Manso (2013). The code requires otree_tools and works best with oTree version 2.1.39. Refer to the app descriptions for further details. 

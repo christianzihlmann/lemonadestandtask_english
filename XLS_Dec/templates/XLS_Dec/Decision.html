@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% load otree_tools %}
+
+{% block title %}
+    Period {{ subsession.round_number }}/{{ Constants.num_rounds }}
+{% endblock %}
+
+{% block content %}
+    {% tracking_focus %}
+    {% tracking_time %}
+<p>Please choose your decision variables below.</p>
+
+
+
+
+ <div class="row">
+    <table class="table">
+
+        {% for field in form %}
+        <tr>
+            <td>{{field.label}}</td>
+            <td>
+
+                <p>{{field}}</p>
+                {% if field.errors %}<p class="text-danger">{{field.errors}}</p>{% endif %}
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    </div>
+
+{% button "Confirm" %}
+
+
+
+{% endblock %}
+
+{% comment %}
+Original
+    {% for field in form %}
+        {% formfield field %}
+    {% endfor %}
+        {% next_button %}
+{% endcomment %}
+

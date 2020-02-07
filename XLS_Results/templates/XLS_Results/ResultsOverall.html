@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% load otree_tools %}
+
+{% block title %}
+    Your Results
+{% endblock %}
+
+{% block content %}
+        {% tracking_focus %}
+    {% tracking_time %}
+
+    <p>Your overall profit amounts up to {{ player.LS_overallprofit|floatformat:"0" }} thaler, of which you will
+        receive 50%, which is {{ participant.payoff|floatformat:"0"  }}.
+        Including
+        the
+        show-up
+        fee, this translates to
+        {{ participant.payoff_plus_participation_fee }}. (Your payment will be rounded up/down to the nearest whole €.)
+    </p>
+
+        <p>The first part of the study, the experimental game, is now over. Next, in the second part of the study, we
+            will ask you questions concerning individual preferences. There is no right or wrong. We kindly ask you
+            to respond faithfully. Thank you.</p>
+                <p> For the survey, we will compensate you with an extra amount of € 2.
+                </p>
+
+
+
+{% button "Continue" %}
+{% endblock %}
+
+

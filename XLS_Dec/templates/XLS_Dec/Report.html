@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+{% load otree_tools %}
+
+{% block title %}
+    Report (Period {{ period1 }} to {{ period3 }})
+{% endblock %}
+
+{% block content %}
+    {% tracking_focus %}
+    {% tracking_time %}
+
+
+{{ treatmentvariable }}
+    {% if participant.vars.treatment == 'P'  %}
+        {% formfield player.report %}
+{% endif %}
+
+        {% if participant.vars.treatment == 'O' %}
+            <br><br>
+            Period {{ period1 }}:
+        {% formfield player.reportp1  %}
+            Period {{ period2 }}:
+        {% formfield player.reportp2 %}
+            Period {{ period3 }}:
+            {% formfield player.reportp3 %}
+{% endif %}
+
+
+{% button "Continue to the next period" %}
+{% endblock %}
+
+

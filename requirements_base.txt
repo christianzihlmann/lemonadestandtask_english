@@ -1,0 +1,4 @@
+otree[mturk]>=2.1.39
+django-radiogrid==1.0.4
+otree-custom-export>=0.1.7
+otree_tools==1.1.15

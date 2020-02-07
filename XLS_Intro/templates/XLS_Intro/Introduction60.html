@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+{% load otree otree_tools %}
+
+{% block title %}
+    Introduction - Comprehension Questions
+{% endblock %}
+
+{% block content %}
+    {% tracking_focus %}
+    {% tracking_time %}
+
+        {% formfield player.a1 %}
+            {% formfield player.a2 %}
+             {% if participant.vars.treatment != 'C' %}
+           {% formfield player.a3 %}
+
+{% endif %}
+
+
+{% button "Verify Answers and Start game" %}
+
+{% endblock %}

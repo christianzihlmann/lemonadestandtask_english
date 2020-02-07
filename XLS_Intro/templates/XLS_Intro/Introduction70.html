@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+{% load otree otree_tools %}
+
+{% block title %}
+    Introduction - Comprehension Questions
+{% endblock %}
+
+{% block content %}
+    {% tracking_focus %}
+    {% tracking_time %}
+<p style="color:red">One or more of your answers were wrong. Please try again. If you have questions, please raise your hand and wait
+    until the instructor will come to your cubicle. </p>
+        {% formfield player.a4 %}
+            {% formfield player.a5 %}
+             {% if participant.vars.treatment != 'C' %}
+           {% formfield player.a6 %}
+
+{% endif %}
+
+
+{% button "Verify Answers and Start game" %}
+
+{% endblock %}
